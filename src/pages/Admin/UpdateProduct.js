@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Layout from "../../components/Layout/Layout";
+import AdminLayout from "../../components/Layout/AdminLayout";
 import AdminMenu from "../../components/Layout/AdminMenu";
 import toast from "react-hot-toast";
 import axios from "axios";
@@ -102,7 +102,7 @@ const UpdateProduct = () => {
     }
   };
   return (
-    <Layout title={"Dashboard - Create Product"}>
+    <AdminLayout title={"Dashboard - Create Product"}>
       <div className="container-fluid m-3 p-3">
         <div className="row">
           <div className="col-md-3">
@@ -228,7 +228,7 @@ const UpdateProduct = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </AdminLayout>
   );
 };
 

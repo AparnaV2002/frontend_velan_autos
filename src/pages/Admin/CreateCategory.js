@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import AdminMenu from './../../components/Layout/AdminMenu'
-import Layout from './../../components/Layout/Layout'
+import AdminLayout from './../../components/Layout/AdminLayout'
 import toast from "react-hot-toast";
 import axios from "axios";
 import CategoryForm from "../../components/Form/CategoryForm";
@@ -90,7 +90,7 @@ const CreateCategory = () => {
   };
 
 return (
-    <Layout title={"Dashboard - Create Category"}>
+    <AdminLayout title={"Dashboard - Create Category"}>
       <div className="container-fluid m-3 p-3 dashboard">
         <div className="row">
           <div className="col-md-3">
@@ -158,7 +158,7 @@ return (
           </div>
         </div>
       </div>
-    </Layout>
+    </AdminLayout>
   );
 };
 

@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
-
+/*@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");*/
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Poppins:wght@300&display=swap');
 * {
  
   margin: 0;
@@ -14,10 +14,12 @@
 .navbar {
   font-family: "Poppins", sans-serif;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 20px;
+  min-height: 20px;
   text-transform: uppercase;
-  box-shadow: 0 8px 6px -6px gray;
-  --webkit-box-shadow: 0 8px 6px -6px gray;
+ 
+  box-shadow: 0 8px 6px -6px rgb(14, 15, 15);
+  --webkit-box-shadow: 0 8px 6px -6px rgb(15, 15, 15);
   border-bottom: solid gray !important;
 }
 
@@ -26,7 +28,7 @@
 }
 
 .active {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid red;
 }
 
 .navbar-brand {
@@ -53,21 +55,24 @@
 ==========footer============= */
 
 .footer {
-  color: white;
-  padding: 25px;
-  background: #000000; /* fallback for old browsers */
+  color: black;
+  padding: 10px;
+  min-height: 20vh;
+  background: #f6f6f6; /* fallback for old browsers */
+
   background: -webkit-linear-gradient(
     to right,
     #434343,
-    #000000
+    #2d0878
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000);
+  /* background: linear-gradient(to right, #434343, #2d0878); */
 }
 
 .footer a {
   text-decoration: none;
-  color: white;
-  padding: 10px;
+  color: black;
+  padding: 3px;
+ 
 }
 
 .footer a:hover {
@@ -78,10 +83,13 @@
 ======== page not found css ======= */
 .pnf {
   display: flex;
-  min-height: 65vh;
+  min-height: 70vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZAJCGA4EaY-_E_SnU9xr2-S1SpyK7S82YBZpr2G3IDg&usqp=CAU&ec=48600113");
+  background-size: cover; 
+  background-position: center;
 }
 
 .pnf-title {
@@ -142,4 +150,64 @@
   background-color: #434343 !important;
   color: white;
   padding: 20px 0px;
+}
+
+.pic-ctn {
+  width: 100vw;
+  height: 70vh;
+}
+.pic{
+  height:60vh;
+  width:70vw;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.pic-ctn {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  margin-top: 15vh;
+}
+
+.pic-ctn > img {
+  position: absolute;
+  top: 0;
+  left: calc(20% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
 }

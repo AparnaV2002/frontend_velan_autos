@@ -19,9 +19,13 @@ const Spinner = ({ path = "login" }) => {
     <>
       <div
         className="d-flex flex-column justify-content-center align-items-center"
-        style={{ height: "100vh" }}
+        style={{ height: "100vh",
+        backgroundImage: `url('https://images.saymedia-content.com/.image/t_share/MTkzOTUzODU0MDkyODc5MzY1/particlesjs-examples.gif')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+  }}
       >
-        <h1 className="Text-center">redirecting to you in {count} second </h1>
+        <h1 className="Text-center">Redirecting to you in {count} second </h1>
         <div className="spinner-border" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>

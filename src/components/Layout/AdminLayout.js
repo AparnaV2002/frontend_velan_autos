@@ -1,9 +1,9 @@
 import React from 'react'
 import Footer from "./Footer";
-import Header from "./Header";
+import AdminHeader from "./AdminHeader";
 import { Helmet } from "react-helmet";
 import {Toaster} from "react-hot-toast";
-const Layout = ({children,title,description,keywords,author}) => {
+const AdminLayout = ({children,title,description,keywords,author}) => {
   return (
   <>
   <Helmet>
@@ -13,7 +13,7 @@ const Layout = ({children,title,description,keywords,author}) => {
         <meta name="author" content={author} />
         <title>{title}</title>
       </Helmet>
-  <Header/>
+  <AdminHeader/>
   
   <main style={{
     minHeight: "70vh",
@@ -29,10 +29,10 @@ const Layout = ({children,title,description,keywords,author}) => {
   )
 }
 
-Layout.defaultProps = {
+AdminLayout.defaultProps = {
   title: "Ecommerce app - shop now",
   description: "mern stack project",
   keywords: "mern,react,node,mongodb",
   author: "aparna",
 };
-export default Layout
+export default AdminLayout

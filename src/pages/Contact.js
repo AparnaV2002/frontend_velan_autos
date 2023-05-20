@@ -1,11 +1,12 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
-import { BiMailSend, BiPhoneCall, BiSupport, BiLocationPlus } from "react-icons/bi";
+import { BiMailSend, BiPhoneCall, BiSupport } from "react-icons/bi";
 import {IoLocationSharp} from "react-icons/io5";
 const Contact = () => {
   return (
     <Layout title={"Contact us"}>
-      <br></br>
+      <br/>
+      <br/>
       <div className="row contactus ">
         <div className="col-md-6 ">
           <img
@@ -21,10 +22,11 @@ const Contact = () => {
             Feel Free to call!
           </p>
           <p className="mt-3">
-            <BiMailSend /> : velantvs@gmail.com
+            <BiMailSend /> :  <a href="mailto:email@example.com?subject='Hello from Abstract!'&body='Just popped in to say hello'" style={{ textAlign: 'center' }}>velantvs@gmail.com</a>
           </p>
           <p className="mt-3">
             <BiPhoneCall /> : 98427-06599
+            <br/>
             <BiPhoneCall /> : 98427-06577
           </p>
           <p className="mt-3">

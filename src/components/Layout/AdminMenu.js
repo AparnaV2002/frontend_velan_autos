@@ -36,12 +36,7 @@ const AdminMenu = () => {
           >
             Users
           </NavLink>
-          <NavLink
-            to="/dashboard/admin/review"
-            className="list-group-item list-group-item-action"
-          >
-            Feedback
-          </NavLink>
+         
         </div>
       </div>
     </>

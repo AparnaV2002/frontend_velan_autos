@@ -19,7 +19,7 @@ import Profile from "./pages/user/Profile";
 import Orders from "./pages/user/Orders";
 import Products from "./pages/Admin/Products";
 import UpdateProduct from "./pages/Admin/UpdateProduct";
-
+import Updateaddress from "./pages/user/Updateaddress";
 import Search from "./pages/Search";
 import ProductDetails from "./pages/ProductDetails";
 import Categories from "./pages/Categories";
@@ -28,12 +28,17 @@ import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders"
 import Feedback from "./pages/Auth/Feedback";
 import Review from "./pages/Admin/Review";
+import Address from "./pages/user/Address";
+import Home from "./pages/Home";
+import Form from "./pages/Auth/Form";
 
 function App() {
   return (
     <>
       <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/prebook" element={<Form />} />
       <Route path="/product/:slug" element={<ProductDetails />} />
       <Route path="/categories" element={<Categories />} />
       <Route path="/feedback" element={<Feedback/>}/>
@@ -44,7 +49,7 @@ function App() {
         <Route path="user" element={<Dashboard/>}/>
         <Route path="user/profile" element={<Profile/>}/>
         <Route path="user/orders" element={<Orders/>}/>
-       
+        <Route path="user/address" element={<Address/>}/>
       </Route>
       <Route path="/dashboard" element={<AdminRoute/>}>
         <Route path="admin" element={<AdminDashboard/>}/>
@@ -60,6 +65,7 @@ function App() {
         <Route path="admin/orders" element={<AdminOrders/>}/>
       </Route>
       <Route path="/register" element={<Register />} />
+      {/* <Route path="/address" element={<Address />} /> */}
       <Route path="/forgot-password" element={<ForgotPasssword/>}/>
       <Route path="/login" element={<Login />} />
       <Route path="/about" element={<About />} />

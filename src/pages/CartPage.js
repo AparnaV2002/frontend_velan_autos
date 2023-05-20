@@ -24,9 +24,9 @@ const CartPage = () => {
       cart?.map((item) => {
         total = total + item.price;
       });
-      return total.toLocaleString("en-US", {
+      return total.toLocaleString("en", {
         style: "currency",
-        currency: "USD",
+        currency: "INR",
       });
     } catch (error) {
       console.log(error);
@@ -122,7 +122,7 @@ theme:{
                 : `Hello  ${auth?.token && auth?.user?.name}`}
               <p className="text-center">
                 {cart?.length
-                  ? `You Have ${cart.length} items in your cart ${
+                  ? `You Have ${cart.length} items in your cart  ${
                       auth?.token ? "" : "please login to checkout !"
                     }`
                   : " Your Cart Is Empty"}

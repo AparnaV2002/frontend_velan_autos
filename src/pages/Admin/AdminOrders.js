@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import toast from "react-hot-toast";
+import toast from "react-hot-toast";
 import AdminMenu from "../../components/Layout/AdminMenu";
-import Layout from "../../components/Layout/Layout";
+import AdminLayout from "../../components/Layout/AdminLayout";
 import { useAuth } from "../../context/auth";
 import moment from "moment";
 import { Select } from "antd";
@@ -16,7 +16,7 @@ const AdminOrders = () => {
     "deliverd",
     "cancel",
   ]);
-  const [changeStatus, setCHangeStatus] = useState("");
+  const [changeStatus, setChangeStatus] = useState("");
   const [orders, setOrders] = useState([]);
   const [auth, setAuth] = useAuth();
   const getOrders = async () => {
@@ -43,7 +43,7 @@ const AdminOrders = () => {
     }
   };
   return (
-    <Layout title={"All Orders Data"}>
+    <AdminLayout title={"All Orders Data"}>
       <div className="row dashboard">
         <div className="col-md-3">
           <AdminMenu />
@@ -82,7 +82,8 @@ const AdminOrders = () => {
                       </td>
                       <td>{o?.buyer?.name}</td>
                       <td>{moment(o?.createAt).fromNow()}</td>
-                      <td>{o?.payment.success ? "Success" : "Failed"}</td>
+                      <td>{o?.payment?.success}</td>
+                      {/* <td>{o?.payment.success ? "Success" : "Success"}</td> */}
                       <td>{o?.products?.length}</td>
                     </tr>
                   </tbody>
@@ -112,7 +113,7 @@ const AdminOrders = () => {
           })}
         </div>
       </div>
-    </Layout>
+    </AdminLayout>
   );
 };
 
