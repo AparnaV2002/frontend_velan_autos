@@ -1,4 +1,5 @@
 {
+  "build": "node_modules/.bin/react-scripts build",
   "homepage":"http://AparnaV2002.github.io/frontend_velan_autos",
   "name": "client",
   "proxy": "http://localhost:8080",
